@@ -148,7 +148,7 @@ const Dashboard = () => {
               <div>
                 <label className="text-sm font-medium mb-2 block">Localização</label>
                 <Select>
-                  <SelectTrigger className="bg-white text-black">
+                  <SelectTrigger>
                     <SelectValue placeholder="Todas" />
                   </SelectTrigger>
                   <SelectContent>
@@ -162,7 +162,7 @@ const Dashboard = () => {
               <div>
                 <label className="text-sm font-medium mb-2 block">Valor</label>
                 <Select>
-                  <SelectTrigger className="bg-white text-black">
+                  <SelectTrigger>
                     <SelectValue placeholder="Todos" />
                   </SelectTrigger>
                   <SelectContent>
@@ -176,7 +176,7 @@ const Dashboard = () => {
               <div>
                 <label className="text-sm font-medium mb-2 block">Compatibilidade</label>
                 <Select>
-                  <SelectTrigger className="bg-white text-black">
+                  <SelectTrigger>
                     <SelectValue placeholder="Todas" />
                   </SelectTrigger>
                   <SelectContent>
@@ -190,7 +190,7 @@ const Dashboard = () => {
               <div>
                 <label className="text-sm font-medium mb-2 block">Status</label>
                 <Select>
-                  <SelectTrigger className="bg-white text-black">
+                  <SelectTrigger>
                     <SelectValue placeholder="Todos" />
                   </SelectTrigger>
                   <SelectContent>
@@ -216,7 +216,7 @@ const Dashboard = () => {
         {activeTab === "editais" && (
           <div className="space-y-4">
             <h2 className="text-2xl font-bold mb-4">
-              <span className="text-orange">Oportunidades</span> em Editais
+              <span className="text-cyan">Oportunidades</span> em Editais
             </h2>
             {mockEditais.map((edital) => (
               <Card key={edital.id} className="hover-lift shadow-elegant cursor-pointer border-border bg-card">
@@ -271,7 +271,7 @@ const Dashboard = () => {
         {activeTab === "empresas" && (
           <div className="space-y-4">
             <h2 className="text-2xl font-bold mb-4">
-              <span className="text-orange">Empresas</span> Potenciais B2B
+              <span className="text-cyan">Empresas</span> Potenciais B2B
             </h2>
             {mockEmpresas.map((empresa) => (
               <Card key={empresa.id} className="hover-lift shadow-elegant cursor-pointer border-border bg-card">
