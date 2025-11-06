@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Target, Building2, Plus, Trash2, ArrowLeft } from "lucide-react";
+import { Target, Building2, Plus, Trash2, ArrowLeft, User, LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
@@ -78,6 +78,14 @@ const Perfil = () => {
               <ArrowLeft className="h-5 w-5" />
             </Button>
             <span className="text-2xl font-bold">Perfil da Empresa</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" size="icon" className="hover:bg-primary hover:text-primary-foreground">
+              <User className="h-5 w-5" />
+            </Button>
+            <Button variant="ghost" size="icon" onClick={() => navigate("/login")} className="hover:bg-primary hover:text-primary-foreground">
+              <LogOut className="h-5 w-5" />
+            </Button>
           </div>
         </div>
       </header>
