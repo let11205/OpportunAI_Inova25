@@ -112,7 +112,7 @@ const Landing = () => {
               onClick={() => {
                 document.getElementById('quem-somos')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-8 py-6 text-lg border-2"
+              className="px-8 py-6 text-lg border-2 border-white text-white hover:bg-white hover:text-black"
             >
               Saiba mais
             </Button>
