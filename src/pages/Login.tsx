@@ -53,9 +53,9 @@ const Login = () => {
         <Card className="w-full max-w-md shadow-elegant border-border">
           <CardHeader className="text-center space-y-4">
             <div className="flex justify-center">
-              <img src={logo} alt="OpportunAI" className="h-12 w-auto" />
+              <img src={logo} alt="OpportunAI" className="h-12 w-auto brightness-0 invert" />
             </div>
-            <CardTitle className="text-2xl">Bem-vindo à OpportunAI</CardTitle>
+            <CardTitle className="text-2xl">Bem vindo a OpportunAI!</CardTitle>
             <CardDescription className="text-base">
               Em qual setor você trabalha?
             </CardDescription>
@@ -65,7 +65,7 @@ const Login = () => {
               onClick={handleSectorSelect}
               className="w-full h-16 text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow"
             >
-              Segurança da Indústria
+              Tecnologia industrial
             </Button>
           </CardContent>
         </Card>
@@ -78,7 +78,7 @@ const Login = () => {
       <Card className="w-full max-w-md shadow-elegant border-border">
         <CardHeader className="text-center space-y-2">
           <div className="flex justify-center mb-2">
-            <img src={logo} alt="OpportunAI" className="h-10 w-auto" />
+            <img src={logo} alt="OpportunAI" className="h-10 w-auto brightness-0 invert" />
           </div>
           <CardTitle className="text-2xl">
             {isLogin ? "Entrar na plataforma" : "Criar sua conta"}
