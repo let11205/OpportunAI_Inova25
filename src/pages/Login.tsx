@@ -140,7 +140,7 @@ const Login = () => {
               />
             </div>
 
-            <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
+            <Button type="submit" className="w-full bg-white text-black hover:bg-white/90">
               {isLogin ? "Entrar" : "Criar conta"}
             </Button>
 
