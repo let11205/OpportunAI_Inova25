@@ -120,7 +120,7 @@ const Dashboard = () => {
           <Button
             variant={activeTab === "editais" ? "default" : "outline"}
             onClick={() => setActiveTab("editais")}
-            className={`flex items-center gap-2 ${activeTab === "editais" ? "bg-white text-black hover:bg-white/90" : "border-white text-white hover:bg-white hover:text-black"}`}
+            className={`flex items-center gap-2 ${activeTab === "editais" ? "bg-primary text-primary-foreground hover:bg-primary/90" : "border-white text-white hover:bg-white hover:text-black"}`}
           >
             <FileText className="h-4 w-4" />
             Meus Editais
