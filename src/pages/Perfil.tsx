@@ -126,7 +126,7 @@ const Perfil = () => {
                 />
               </div>
             </div>
-            <Button className="bg-accent hover:bg-accent/90">
+            <Button className="bg-primary hover:bg-primary/90">
               Salvar alterações
             </Button>
           </CardContent>
@@ -197,7 +197,7 @@ const Perfil = () => {
                 </div>
                 <Button 
                   onClick={handleAddProduct}
-                  className="bg-accent hover:bg-accent/90"
+                  className="bg-primary hover:bg-primary/90"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Adicionar Produto
