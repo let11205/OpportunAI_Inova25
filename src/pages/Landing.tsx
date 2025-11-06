@@ -40,7 +40,7 @@ const Landing = () => {
           </div>
           
           {/* Navigation Menu */}
-          <nav className="hidden md:flex items-center gap-4">
+          <nav className="hidden md:flex items-center gap-2">
             <a 
               href="#quem-somos"
               onClick={(e) => {
@@ -76,7 +76,7 @@ const Landing = () => {
           <Button 
             variant="light" 
             onClick={() => navigate("/login")}
-            className="uppercase tracking-wide ml-4"
+            className="uppercase tracking-wide ml-2"
           >
             Login
           </Button>
