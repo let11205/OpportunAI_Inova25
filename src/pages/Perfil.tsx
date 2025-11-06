@@ -7,7 +7,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Target, Building2, Plus, Trash2, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
-import logo from "@/assets/logo.png";
 
 interface Product {
   id: number;
@@ -78,10 +77,7 @@ const Perfil = () => {
             <Button variant="ghost" size="icon" onClick={() => navigate("/dashboard")}>
               <ArrowLeft className="h-5 w-5" />
             </Button>
-            <div className="flex items-center gap-1.5">
-              <img src={logo} alt="OpportunAI" className="h-8 w-auto brightness-0 invert" />
-              <span className="text-2xl font-bold">Perfil da Empresa</span>
-            </div>
+            <span className="text-2xl font-bold">Perfil da Empresa</span>
           </div>
         </div>
       </header>
