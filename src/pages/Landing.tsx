@@ -96,14 +96,26 @@ const Landing = () => {
               Automatize sua prospecção comercial e conecte-se com editais, 
               licitações e empresas que realmente importam.
             </p>
-            <Button 
-              size="lg" 
-              variant="light"
-              onClick={() => navigate("/login")}
-              className="px-8 py-6 text-lg shadow-glow hover-lift"
-            >
-              Explorar plataforma
-            </Button>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                size="lg" 
+                variant="light"
+                onClick={() => navigate("/login")}
+                className="px-8 py-6 text-lg shadow-glow hover-lift"
+              >
+                Começar gratuitamente
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                onClick={() => {
+                  document.getElementById('quem-somos')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="px-8 py-6 text-lg border-2"
+              >
+                Saiba mais
+              </Button>
+            </div>
           </div>
         </div>
       </section>
