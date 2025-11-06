@@ -229,7 +229,7 @@ const Landing = () => {
       </section>
 
       {/* Por que usar */}
-      <section id="por-que-usar" className="py-24 bg-gradient-to-b from-background to-secondary/20">
+      <section id="por-que-usar" className="py-16 bg-gradient-to-b from-background to-secondary/20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
             Por que usar nossa <span className="text-orange">plataforma</span>?
