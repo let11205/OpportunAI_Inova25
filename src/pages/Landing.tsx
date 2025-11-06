@@ -172,6 +172,86 @@ const Landing = () => {
         </div>
       </section>
 
+      {/* O que é OpportunAI */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                O que é a <span className="text-cyan">OpportunAI</span>?
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Uma plataforma inteligente que revoluciona a forma como empresas encontram e conquistam oportunidades de negócio
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-gradient-to-br from-cyan/10 to-cyan/5 p-8 rounded-2xl border border-cyan/20">
+                <div className="w-16 h-16 rounded-full bg-cyan/20 flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-foreground">Inteligência Artificial Avançada</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Nossa IA analisa milhares de fontes diariamente - portais de licitação, sites governamentais, bases públicas e privadas - para identificar oportunidades que combinam perfeitamente com o perfil da sua empresa.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-orange/10 to-orange/5 p-8 rounded-2xl border border-orange/20">
+                <div className="w-16 h-16 rounded-full bg-orange/20 flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-foreground">Automação Completa</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Esqueça a busca manual. A OpportunAI trabalha 24/7 monitorando editais, licitações e empresas em potencial, enviando alertas em tempo real sobre as melhores oportunidades para o seu negócio.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-coral/10 to-coral/5 p-8 rounded-2xl border border-coral/20">
+                <div className="w-16 h-16 rounded-full bg-coral/20 flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-foreground">Insights Estratégicos</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Receba análises detalhadas sobre cada oportunidade, incluindo histórico do cliente, valor estimado, concorrência e probabilidade de sucesso, tudo em um dashboard intuitivo.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-cyan/10 to-orange/5 p-8 rounded-2xl border border-cyan/20">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan/20 to-orange/20 flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-foreground">Economia de Tempo</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Reduza em até 90% o tempo gasto em prospecção. Sua equipe comercial pode focar no que realmente importa: fechar negócios e construir relacionamentos com clientes.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <p className="text-lg text-muted-foreground mb-6">
+                Junte-se a centenas de empresas que já transformaram sua prospecção comercial
+              </p>
+              <Button 
+                size="lg" 
+                variant="light"
+                onClick={() => navigate("/login")}
+                className="px-8 py-6 text-lg shadow-glow hover-lift"
+              >
+                Experimentar gratuitamente
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Por que usar */}
       <section id="por-que-usar" className="py-24 bg-gradient-to-b from-background to-secondary/20">
         <div className="container mx-auto px-6">
