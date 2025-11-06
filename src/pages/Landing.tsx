@@ -59,7 +59,7 @@ const Landing = () => {
               }}
               className="text-white/70 hover:text-white transition-colors cursor-pointer"
             >
-              O que é a OpportunAI?
+              O que é a OpportunAI
             </a>
             <a 
               href="#por-que-usar"
