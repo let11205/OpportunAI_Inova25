@@ -104,10 +104,10 @@ const Dashboard = () => {
             <span className="text-2xl font-bold text-white">OpportunAI</span>
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" onClick={() => navigate("/perfil")} className="hover:bg-secondary">
+            <Button variant="ghost" size="icon" onClick={() => navigate("/perfil")} className="hover:bg-primary hover:text-primary-foreground">
               <User className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" onClick={() => navigate("/")} className="hover:bg-secondary">
+            <Button variant="ghost" size="icon" onClick={() => navigate("/")} className="hover:bg-primary hover:text-primary-foreground">
               <LogOut className="h-5 w-5" />
             </Button>
           </div>
