@@ -25,7 +25,6 @@ const Perfil = () => {
     cnpj: "12.345.678/0001-99",
     sector: "Segurança da Indústria",
     email: "contato@empresa.com.br",
-    website: "https://empresa.com.br",
   });
 
   const [products, setProducts] = useState<Product[]>([
@@ -128,14 +127,6 @@ const Perfil = () => {
                   type="email"
                   value={companyData.email}
                   onChange={(e) => setCompanyData({...companyData, email: e.target.value})}
-                />
-              </div>
-              <div className="space-y-2 md:col-span-2">
-                <Label>Site</Label>
-                <Input 
-                  type="url"
-                  value={companyData.website}
-                  onChange={(e) => setCompanyData({...companyData, website: e.target.value})}
                 />
               </div>
             </div>
