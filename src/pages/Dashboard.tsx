@@ -264,9 +264,6 @@ const Dashboard = () => {
                       </div>
                     </div>
                     <div className="text-right">
-                      <Badge className="bg-primary text-primary-foreground mb-2">
-                        {edital.compatibility}% compatível
-                      </Badge>
                       <div className="text-sm text-muted-foreground">{edital.status}</div>
                     </div>
                   </div>
