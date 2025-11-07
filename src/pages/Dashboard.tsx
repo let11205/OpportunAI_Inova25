@@ -152,9 +152,33 @@ const Dashboard = () => {
                     <SelectValue placeholder="Todas" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="sp">São Paulo</SelectItem>
-                    <SelectItem value="rj">Rio de Janeiro</SelectItem>
+                    <SelectItem value="ac">Acre</SelectItem>
+                    <SelectItem value="al">Alagoas</SelectItem>
+                    <SelectItem value="ap">Amapá</SelectItem>
+                    <SelectItem value="am">Amazonas</SelectItem>
+                    <SelectItem value="ba">Bahia</SelectItem>
+                    <SelectItem value="ce">Ceará</SelectItem>
+                    <SelectItem value="df">Distrito Federal</SelectItem>
+                    <SelectItem value="es">Espírito Santo</SelectItem>
+                    <SelectItem value="go">Goiás</SelectItem>
+                    <SelectItem value="ma">Maranhão</SelectItem>
+                    <SelectItem value="mt">Mato Grosso</SelectItem>
+                    <SelectItem value="ms">Mato Grosso do Sul</SelectItem>
                     <SelectItem value="mg">Minas Gerais</SelectItem>
+                    <SelectItem value="pa">Pará</SelectItem>
+                    <SelectItem value="pb">Paraíba</SelectItem>
+                    <SelectItem value="pr">Paraná</SelectItem>
+                    <SelectItem value="pe">Pernambuco</SelectItem>
+                    <SelectItem value="pi">Piauí</SelectItem>
+                    <SelectItem value="rj">Rio de Janeiro</SelectItem>
+                    <SelectItem value="rn">Rio Grande do Norte</SelectItem>
+                    <SelectItem value="rs">Rio Grande do Sul</SelectItem>
+                    <SelectItem value="ro">Rondônia</SelectItem>
+                    <SelectItem value="rr">Roraima</SelectItem>
+                    <SelectItem value="sc">Santa Catarina</SelectItem>
+                    <SelectItem value="sp">São Paulo</SelectItem>
+                    <SelectItem value="se">Sergipe</SelectItem>
+                    <SelectItem value="to">Tocantins</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -166,9 +190,13 @@ const Dashboard = () => {
                     <SelectValue placeholder="Todos" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="low">Até R$ 100k</SelectItem>
-                    <SelectItem value="mid">R$ 100k - R$ 500k</SelectItem>
-                    <SelectItem value="high">Acima de R$ 500k</SelectItem>
+                    <SelectItem value="very-low">Até R$ 50k</SelectItem>
+                    <SelectItem value="low">R$ 50k - R$ 100k</SelectItem>
+                    <SelectItem value="mid-low">R$ 100k - R$ 250k</SelectItem>
+                    <SelectItem value="mid">R$ 250k - R$ 500k</SelectItem>
+                    <SelectItem value="mid-high">R$ 500k - R$ 1M</SelectItem>
+                    <SelectItem value="high">R$ 1M - R$ 5M</SelectItem>
+                    <SelectItem value="very-high">Acima de R$ 5M</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
