@@ -195,8 +195,8 @@ const Dashboard = () => {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="open">Aberto</SelectItem>
-                    <SelectItem value="closing">Encerrando</SelectItem>
-                    <SelectItem value="closed">Encerrado</SelectItem>
+                    <SelectItem value="closed">Fechado</SelectItem>
+                    <SelectItem value="soon">Em breve</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
