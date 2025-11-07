@@ -1,17 +1,12 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { 
-  Target, 
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
   Search, 
   Filter, 
   Building2, 
-  FileText, 
   MapPin, 
   Calendar,
-  TrendingUp,
   User,
   LogOut
 } from "lucide-react";
@@ -27,7 +22,6 @@ import logo from "@/assets/logo.png";
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState<"editais" | "empresas">("editais");
 
   // Dados mock de editais
   const mockEditais = [
@@ -63,37 +57,6 @@ const Dashboard = () => {
     }
   ];
 
-  // Dados mock de empresas
-  const mockEmpresas = [
-    {
-      id: 1,
-      name: "Indústria Química Braskem",
-      sector: "Química e Petroquímica",
-      location: "São Paulo, SP",
-      compatibility: 92,
-      potential: "Alto",
-      employees: "5000+"
-    },
-    {
-      id: 2,
-      name: "Mineradora Brasil S.A.",
-      sector: "Mineração",
-      location: "Minas Gerais",
-      compatibility: 87,
-      potential: "Médio-Alto",
-      employees: "2000-5000"
-    },
-    {
-      id: 3,
-      name: "Usina Energética do Nordeste",
-      sector: "Energia",
-      location: "Recife, PE",
-      compatibility: 79,
-      potential: "Médio",
-      employees: "1000-2000"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -115,26 +78,6 @@ const Dashboard = () => {
       </header>
 
       <div className="container mx-auto px-6 py-8">
-        {/* Tabs */}
-        <div className="flex gap-4 mb-8">
-          <Button
-            variant={activeTab === "editais" ? "default" : "outline"}
-            onClick={() => setActiveTab("editais")}
-            className={`flex items-center gap-2 ${activeTab === "editais" ? "bg-primary text-primary-foreground hover:bg-primary/90" : "border-white text-white hover:bg-white hover:text-black"}`}
-          >
-            <FileText className="h-4 w-4" />
-            Meus Editais
-          </Button>
-          <Button
-            variant={activeTab === "empresas" ? "default" : "outline"}
-            onClick={() => setActiveTab("empresas")}
-            className={`flex items-center gap-2 ${activeTab === "empresas" ? "bg-white text-black hover:bg-white/90" : "border-white text-white hover:bg-white hover:text-black"}`}
-          >
-            <Building2 className="h-4 w-4" />
-            Minhas Empresas
-          </Button>
-        </div>
-
         {/* Filtros */}
         <Card className="mb-8 shadow-elegant border-border">
           <CardHeader>
@@ -144,7 +87,7 @@ const Dashboard = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-4 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               <div>
                 <label className="text-sm font-medium mb-2 block">Localização</label>
                 <Select>
@@ -202,20 +145,6 @@ const Dashboard = () => {
               </div>
 
               <div>
-                <label className="text-sm font-medium mb-2 block">Compatibilidade</label>
-                <Select>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Todas" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="high">Alta (80%+)</SelectItem>
-                    <SelectItem value="mid">Média (60-80%)</SelectItem>
-                    <SelectItem value="low">Baixa (&lt;60%)</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div>
                 <label className="text-sm font-medium mb-2 block">Status</label>
                 <Select>
                   <SelectTrigger>
@@ -241,113 +170,54 @@ const Dashboard = () => {
         </Card>
 
         {/* Resultados - Editais */}
-        {activeTab === "editais" && (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold mb-4">
-              <span className="text-white">Oportunidades</span> em Editais
-            </h2>
-            {mockEditais.map((edital) => (
-              <Card key={edital.id} className="hover-lift shadow-elegant cursor-pointer border-border bg-card">
-                <CardContent className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-2">{edital.title}</h3>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span className="flex items-center gap-1">
-                          <Building2 className="h-4 w-4" />
-                          {edital.organ}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <MapPin className="h-4 w-4" />
-                          {edital.location}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm text-muted-foreground">{edital.status}</div>
+        <div className="space-y-4">
+          <h2 className="text-2xl font-bold mb-4">
+            <span className="text-white">Oportunidades</span> em Editais
+          </h2>
+          {mockEditais.map((edital) => (
+            <Card key={edital.id} className="hover-lift shadow-elegant cursor-pointer border-border bg-card">
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold mb-2">{edital.title}</h3>
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                      <span className="flex items-center gap-1">
+                        <Building2 className="h-4 w-4" />
+                        {edital.organ}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <MapPin className="h-4 w-4" />
+                        {edital.location}
+                      </span>
                     </div>
                   </div>
-                  
-                  <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border">
-                    <div>
-                      <div className="text-sm text-muted-foreground">Valor estimado</div>
-                      <div className="font-semibold text-green">{edital.value}</div>
-                    </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">Prazo final</div>
-                      <div className="font-semibold flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        {edital.deadline}
-                      </div>
-                    </div>
-                    <div className="flex justify-end items-center">
-                      <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground">
-                        Ver detalhes
-                      </Button>
+                  <div className="text-right">
+                    <div className="text-sm text-muted-foreground">{edital.status}</div>
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border">
+                  <div>
+                    <div className="text-sm text-muted-foreground">Valor estimado</div>
+                    <div className="font-semibold text-green">{edital.value}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">Prazo final</div>
+                    <div className="font-semibold flex items-center gap-1">
+                      <Calendar className="h-4 w-4" />
+                      {edital.deadline}
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        )}
-
-        {/* Resultados - Empresas */}
-        {activeTab === "empresas" && (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold mb-4">
-              <span className="text-cyan">Empresas</span> Potenciais B2B
-            </h2>
-            {mockEmpresas.map((empresa) => (
-              <Card key={empresa.id} className="hover-lift shadow-elegant cursor-pointer border-border bg-card">
-                <CardContent className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-2">{empresa.name}</h3>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span className="flex items-center gap-1">
-                          <Building2 className="h-4 w-4" />
-                          {empresa.sector}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <MapPin className="h-4 w-4" />
-                          {empresa.location}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <Badge className="bg-primary text-primary-foreground mb-2">
-                        {empresa.compatibility}% compatível
-                      </Badge>
-                      <div className="text-sm text-muted-foreground">
-                        Potencial: {empresa.potential}
-                      </div>
-                    </div>
+                  <div className="flex justify-end items-center">
+                    <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground">
+                      Ver detalhes
+                    </Button>
                   </div>
-                  
-                  <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border">
-                    <div>
-                      <div className="text-sm text-muted-foreground">Funcionários</div>
-                      <div className="font-semibold">{empresa.employees}</div>
-                    </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">Momento</div>
-                      <div className="font-semibold flex items-center gap-1">
-                        <TrendingUp className="h-4 w-4 text-green" />
-                        Em expansão
-                      </div>
-                    </div>
-                    <div className="flex justify-end items-center">
-                      <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground">
-                        Ver perfil
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        )}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </div>
   );
