@@ -72,9 +72,6 @@ const Login = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="tecnologia-industrial">Tecnologia Industrial</SelectItem>
-                <SelectItem value="tecnologia-digital">Tecnologia Digital</SelectItem>
-                <SelectItem value="servicos">Serviços</SelectItem>
-                <SelectItem value="comercio">Comércio</SelectItem>
               </SelectContent>
             </Select>
             
