@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
@@ -14,6 +15,8 @@ const Login = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
+  const [selectedSector, setSelectedSector] = useState("");
+  
   const [formData, setFormData] = useState({
     companyName: "",
     cnpj: "",
@@ -22,7 +25,9 @@ const Login = () => {
   });
 
   const handleSectorSelect = () => {
-    setStep("auth");
+    if (selectedSector) {
+      setStep("auth");
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -60,12 +65,25 @@ const Login = () => {
               Em qual setor você trabalha?
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="space-y-4">
+            <Select value={selectedSector} onValueChange={setSelectedSector}>
+              <SelectTrigger className="w-full h-16 text-lg">
+                <SelectValue placeholder="Selecione seu setor" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="tecnologia-digital">Tecnologia Digital</SelectItem>
+                <SelectItem value="tecnologia-industrial">Tecnologia Industrial</SelectItem>
+                <SelectItem value="servicos">Serviços</SelectItem>
+                <SelectItem value="comercio">Comércio</SelectItem>
+              </SelectContent>
+            </Select>
+            
             <Button 
               onClick={handleSectorSelect}
-              className="w-full h-16 text-lg bg-white text-black hover:bg-white/90"
+              disabled={!selectedSector}
+              className="w-full h-12 text-lg bg-white text-black hover:bg-white/90 disabled:opacity-50"
             >
-              Tecnologia industrial
+              Continuar
             </Button>
           </CardContent>
         </Card>
