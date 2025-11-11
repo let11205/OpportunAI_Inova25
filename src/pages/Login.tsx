@@ -68,11 +68,11 @@ const Login = () => {
           <CardContent className="space-y-4">
             <Select value={selectedSector} onValueChange={setSelectedSector}>
               <SelectTrigger className="w-full h-16 text-lg">
-                <SelectValue placeholder="Selecione seu setor" />
+                <SelectValue placeholder="Selecione a sua opção" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="tecnologia-digital">Tecnologia Digital</SelectItem>
                 <SelectItem value="tecnologia-industrial">Tecnologia Industrial</SelectItem>
+                <SelectItem value="tecnologia-digital">Tecnologia Digital</SelectItem>
                 <SelectItem value="servicos">Serviços</SelectItem>
                 <SelectItem value="comercio">Comércio</SelectItem>
               </SelectContent>
